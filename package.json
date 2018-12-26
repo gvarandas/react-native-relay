@@ -1,0 +1,30 @@
+{
+  "name": "react_native_relay",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "relay": "relay-compiler --src ./src --schema data/schema.graphql",
+    "relay:watch": "yarn relay --watch"
+  },
+  "dependencies": {
+    "react": "16.6.3",
+    "react-native": "0.57.8",
+    "react-native-gesture-handler": "^1.0.12",
+    "react-navigation": "^3.0.9",
+    "react-relay": "^1.7.0"
+  },
+  "devDependencies": {
+    "babel-jest": "23.6.0",
+    "babel-plugin-relay": "^1.7.0",
+    "graphql": "^14.0.2",
+    "jest": "23.6.0",
+    "metro-react-native-babel-preset": "0.51.1",
+    "react-test-renderer": "16.6.3",
+    "relay-compiler": "^1.7.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
