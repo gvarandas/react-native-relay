@@ -1,0 +1,32 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-native/all",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "babel-eslint",
+  "plugins": ["react", "react-native", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "16.6.3"
+    }
+  },
+  "rules": {
+    "react-native/no-color-literals": 0,
+    "react/prop-types": 0
+  },
+  "env": {
+    "react-native/react-native": true,
+    "amd": true,
+    "browser": true,
+    "jest": true
+  }
+}
