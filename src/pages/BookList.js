@@ -3,6 +3,7 @@ import { View, StyleSheet, FlatList } from 'react-native';
 
 import BooksContainer from '../containers/Books';
 import BookRow from '../components/BookRow';
+import Button from '../components/Button';
 
 const BookList = ({ navigation }) => (
   <BooksContainer>
@@ -24,6 +25,10 @@ const BookList = ({ navigation }) => (
           )}
           contentContainerStyle={styles.list}
           keyExtractor={item => item.id}
+        />
+        <Button
+          title="ADD BOOK"
+          onPress={() => navigation.navigate('BookAdd')}
         />
       </View>
     )}

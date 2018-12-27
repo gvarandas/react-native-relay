@@ -4,7 +4,9 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 const BookCard = ({ book }) => (
   <View style={[styles.cardContainer, styles.hasShadow]}>
     <View>
-      <Image style={styles.cover} source={{ uri: book.cover }} />
+      {book.cover && (
+        <Image style={styles.cover} source={{ uri: book.cover }} />
+      )}
     </View>
     <View style={styles.bookInfoContainer}>
       <Text style={styles.title}>{book.title}</Text>

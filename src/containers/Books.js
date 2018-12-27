@@ -21,7 +21,7 @@ const Books = ({ children }) => (
     variables={{}}
     render={({ error, props }) => {
       if (error) {
-        return <Text>Error!</Text>;
+        return <Text>BooksContainer Error!</Text>;
       }
       if (!props) {
         return <Text>Loading...</Text>;
