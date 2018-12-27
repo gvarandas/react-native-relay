@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, FlatList } from 'react-native';
+import { SafeAreaView, StyleSheet, FlatList } from 'react-native';
 
 import BooksContainer from '../containers/Books';
 import BookRow from '../components/BookRow';
@@ -8,7 +8,7 @@ import Button from '../components/Button';
 const BookList = ({ navigation }) => (
   <BooksContainer>
     {books => (
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <FlatList
           data={books}
           renderItem={({ item: { id, author, title } }) => (
@@ -30,7 +30,7 @@ const BookList = ({ navigation }) => (
           title="ADD BOOK"
           onPress={() => navigation.navigate('BookAdd')}
         />
-      </View>
+      </SafeAreaView>
     )}
   </BooksContainer>
 );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Keyboard } from 'react-native';
+import { View, SafeAreaView, StyleSheet, Keyboard } from 'react-native';
 
 import AddBookContainer from '../containers/AddBook';
 
@@ -41,7 +41,7 @@ export default class BookAdd extends React.Component {
     return (
       <AddBookContainer>
         {addBook => (
-          <View style={styles.container}>
+          <SafeAreaView style={styles.container}>
             <View style={styles.inputContainer}>
               <Input
                 label="Title"
@@ -70,7 +70,7 @@ export default class BookAdd extends React.Component {
                 disabled={!(this.state.title && this.state.author)}
               />
             </View>
-          </View>
+          </SafeAreaView>
         )}
       </AddBookContainer>
     );
