@@ -44,30 +44,32 @@ export default class BookAdd extends React.Component {
           <View style={styles.container}>
             <View style={styles.inputContainer}>
               <Input
-                placeholder="book title"
+                label="Title"
                 value={this.state.title}
                 onChangeText={this.onChangeTitle}
               />
             </View>
             <View style={styles.inputContainer}>
               <Input
-                placeholder="book author"
+                label="Author"
                 value={this.state.author}
                 onChangeText={this.onChangeAuthor}
               />
             </View>
             <View style={styles.inputContainer}>
               <Input
-                placeholder="book cover"
+                label="Cover URL"
                 value={this.state.cover}
                 onChangeText={this.onChangeCover}
               />
             </View>
-            <Button
-              title="SAVE"
-              onPress={() => this.onAddBook(addBook)}
-              disabled={!(this.state.title && this.state.author)}
-            />
+            <View style={styles.buttonContainer}>
+              <Button
+                title="SAVE"
+                onPress={() => this.onAddBook(addBook)}
+                disabled={!(this.state.title && this.state.author)}
+              />
+            </View>
           </View>
         )}
       </AddBookContainer>
@@ -87,5 +89,8 @@ const styles = StyleSheet.create({
   inputContainer: {
     paddingTop: 10,
     paddingBottom: 10,
+  },
+  buttonContainer: {
+    marginTop: 20,
   },
 });
